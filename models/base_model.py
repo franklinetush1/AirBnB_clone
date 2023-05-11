@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Define basemodel class"""
 import uuid
 from datetime import datetime
@@ -40,4 +41,4 @@ class BaseModel:
         my_dict["created_at"] = my_dict["created_at"].isoformat()
         my_dict["updated_at"] = my_dict["updated_at"].isoformat()
         my_dict["__class__"] = type(self).__name__                
-        return my_dict
+        return my_dict`
