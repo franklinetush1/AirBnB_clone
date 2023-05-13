@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Command interpreter module."""
 import cmd
-from file_storage import storage
-import file_storage
+from models import storage
 import shlex
 from models.city import City
 from models.place import Place
