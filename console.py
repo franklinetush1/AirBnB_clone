@@ -26,16 +26,9 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_EOF(self, arg):
-        """Exit the program."""
-        return True
-
-    def help_quit(self):
-        """Display help message for the quit command."""
-        print("Exit the program.")
-
-    def help_EOF(self):
-        """Display help message for the EOF command."""
-        print("Exit the program.")
+        """Exit the program"""
+        print()
+        return True  
     
     def do_create(self, input):
         """ Creates an instance according to a given class """
