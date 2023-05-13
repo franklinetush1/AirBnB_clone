@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""Command interpreter module."""
 import cmd
 import base_model
 from file_storage import storage
