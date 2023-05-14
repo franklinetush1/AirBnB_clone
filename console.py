@@ -13,7 +13,7 @@ from models.state import State
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = '(hbnb) '
+    prompt = "(hbnb) "
     __default_classes = ['BaseModel', 'User', 'Amenity',
                          'Place', 'City', 'State', 'Review']
 
