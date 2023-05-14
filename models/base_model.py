@@ -4,6 +4,7 @@ import uuid
 from datetime import datetime
 import models
 
+
 class BaseModel:
     """Class Basemodel"""
     def __init__(self, *args, **kwargs):
@@ -21,24 +22,21 @@ class BaseModel:
         else:
             models.storage.new(self)
             pass
-    
-    
+
     def save(self):
         """Update updated_at with the current datetime."""
         self.updated_at = datetime.now()
         models.storage.save()
-    
 
     def __str__(self):
         """Return the print/str representation of the BaseModel instance."""
         name_class = self.__class__.__name__
         return "[{}] ({}) {}".format(name_class, self.id, self.__dict__)
-    
 
     def to_dict(self):
-        """Returns a dictionary containing all keys/values of __dict__ of instance"""
-        my_dict = self.__dict__.copy()        
+        """Returns a dictionary for keys/values of __dict__ of instance"""
+        my_dict = self.__dict__.copy()
         my_dict["created_at"] = my_dict["created_at"].isoformat()
         my_dict["updated_at"] = my_dict["updated_at"].isoformat()
-        my_dict["__class__"] = type(self).__name__                
+        my_dict["__class__"] = type(self).__name__
         return my_dict

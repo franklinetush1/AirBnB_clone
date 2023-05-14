@@ -15,7 +15,7 @@ from models.state import State
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
     __default_classes = ['BaseModel', 'User', 'Amenity',
-                 'Place', 'City', 'State', 'Review']
+                         'Place', 'City', 'State', 'Review']
 
     def emptyline(self):
         """Do nothing when an empty line is entered."""
@@ -26,9 +26,9 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_EOF(self, arg):
-        """Exit the program"""        
-        return True  
-    
+        """Exit the program"""
+        return True
+
     def do_create(self, input):
         """ Creates an instance according to a given class """
 
@@ -38,12 +38,11 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
         else:
             dict = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
-                   'City': City, 'Amenity': Amenity, 'State': State,
-                   'Review': Review}
+                    'City': City, 'Amenity': Amenity, 'State': State,
+                    'Review': Review}
             instance = dict[input]()
             print(instance.id)
             instance.save()
-    
 
     def do_destroy(self, input):
         """Deletes an instance based on the class name and id"""
@@ -62,7 +61,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     del storage.all()[indx]
                     storage.save()
-    
+
     def do_show(self, imput):
         """Print string representation of an instance"""
         if imput == "" or imput is None:
@@ -79,7 +78,6 @@ class HBNBCommand(cmd.Cmd):
                     print("** no instance found **")
                 else:
                     print(storage.all()[indx])
-    
 
     def do_all(self, input):
         """Prints all string representation"""
@@ -89,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
             else:
                 list1 = [str(obj) for key, obj in storage.all().items()
-                      if type(obj).__name__ == input1[0]]
+                         if type(obj).__name__ == input1[0]]
                 print(list1)
         else:
             list2 = [str(obj) for key, obj in storage.all().items()]
@@ -124,7 +122,7 @@ class HBNBCommand(cmd.Cmd):
                         setattr(instance, input1[2], input1[3])
                         storage.save()
                     return
-            print("** no instance found **")  
+            print("** no instance found **")
 
 
 if __name__ == '__main__':
