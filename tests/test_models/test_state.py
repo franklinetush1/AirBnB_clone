@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest for amenity.py"""
+"""Unittest for state.py"""
 import unittest
 from models.state import State
 import datetime
