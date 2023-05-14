@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """Defines unittests for models/review.py."""
-
 import models
 import unittest
 from datetime import datetime
 from models.review import Review
-
 
 class Test_instantiation(unittest.TestCase):
     """Unittests for testing Review class."""
