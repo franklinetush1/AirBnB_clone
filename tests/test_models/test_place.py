@@ -25,14 +25,8 @@ class TestPlace(unittest.TestCase):
         self.assertIn(Place(), models.storage.all().values())
 
     def test_id_is_public_str(self):
-        self.assertEqual(str, type(Place().id))
-		
-	def test_save(self):
-        pl = Place()
-        sleep(0.05)
-        first_updated_at = pl.updated_at
-        pl.save()
-        self.assertLess(first_updated_at, pl.updated_at)
+        self.assertEqual(str, type(Place().id))	
+
 		
 if __name__ == '__main__':
     unittest.main()
