@@ -13,7 +13,7 @@ from models.state import State
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = '(hbnb) '
+    prompt = "(hbnb) "
     __default_classes = ['BaseModel', 'User', 'Amenity',
                          'Place', 'City', 'State', 'Review']
 
@@ -21,12 +21,13 @@ class HBNBCommand(cmd.Cmd):
         """Do nothing when an empty line is entered."""
         pass
 
-    def do_quit(self, arg):
+    def do_quit(self, input):
         """Quit command to exit the program"""
         return True
 
-    def do_EOF(self, arg):
+    def do_EOF(self, input):
         """Exit the program"""
+        print("")
         return True
 
     def do_create(self, input):
