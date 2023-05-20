@@ -1,0 +1,10 @@
+/* filters style */
+section.filters{
+	display: flex;
+	width: 100%;
+	color: red;
+	height: 70px;	
+	justify-content: right;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+}
