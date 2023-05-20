@@ -1,0 +1,28 @@
+/* button style */
+section.filters button{
+	font-size: 18px;
+	color:#FFFFFF;
+	justify-content: center;
+	height: 48px;
+	border: 0;
+	width: 20%;
+	border-radius: 4px;
+	background-color: #FF5A5F;
+	bottom: 0;
+	margin-right: 30px;
+	margin-top: 11px;
+	}
+/* filters style */
+section.filters{
+	display: flex;
+	width: 100%;
+	color: red;
+	height: 70px;	
+	justify-content: right;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+}
+/* button hover */
+section.filters button:hover{
+	opacity: 90%;
+}
