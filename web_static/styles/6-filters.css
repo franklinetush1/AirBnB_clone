@@ -1,0 +1,87 @@
+/* button style */
+section.filters button{
+	font-size: 18px;
+	color:#FFFFFF;
+	justify-content: center;
+	height: 48px;
+	border: 0;
+	width: 20%;
+	border-radius: 4px;
+	background-color: #FF5A5F;
+	margin-right: 30px;
+	margin-top: 11px;
+	float: right;
+	}
+/* filters style */
+section.filters{
+	width: 100%;	
+	height: 70px;	
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+}
+/* button hover */
+section.filters button:hover{
+	opacity: 90%;
+}
+/* locations style */
+/* Locations and amenities style */
+.locations,
+.amenities {
+  float: left;
+  height: 100%;
+  width: 25%;  
+}
+/* h3 style */
+.locations h3,
+.amenities h3{
+	font-weight: 600;	
+    margin-left: 50px;
+    padding: 0;
+    margin-bottom: 3%;
+}
+/* h4 style */
+.locations h4,
+.amenities h4{
+	font-weight: 400;
+	font-size: 14px;
+	margin-left: 50px;
+	line-height: 0px;
+	padding: 0;
+	margin-top: 0;
+}
+/* locations style */
+.locations{
+	border-right:1px solid #DDDDDD;
+}
+/* popover style */
+.popover{
+	list-style-type:none;
+	display: none;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-top:27px;
+	background-color: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+
+}
+/* popover h2 style */
+.popover h2{
+	font-size: 16px;
+	margin-left: 0px;
+	margin-bottom: 3px;
+}
+/* amenities li style */
+.popover li{
+	margin-left: 0px;
+}
+/* hover style */
+.filters .locations:hover .popover,
+.filters .amenities:hover .popover {
+  display: block;
+}
+/* popover ul style */
+.popover ul{
+	list-style-type:none;
+	margin-left: -15px;
+}
